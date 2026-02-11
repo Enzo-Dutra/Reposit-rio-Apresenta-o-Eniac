@@ -19,23 +19,9 @@ O projeto tem como objetivo fortalecer a identidade institucional, destacando su
 ## Colaboradores
 
 <p align="center">
-  <a href="https://github.com/Enzo-Dutra">
-    <img src="https://github.com/Enzo-Dutra.png" width="100px;" style="border-radius:50%" />
-  </a>
-  <a href="https://github.com/Rafa-A-Brito">
-    <img src="https://github.com/Rafa-A-Brito.png" width="100px;" style="border-radius:50%" />
-  </a>
-  <a href="https://github.com/itsanapaula">
-    <img src="https://github.com/itsanapaula.png" width="100px;" style="border-radius:50%" />
-  </a>
-  <a href="https://github.com/jabut1">
-    <img src="https://github.com/jabut1.png" width="100px;" style="border-radius:50%" />
-  </a>
-   <a href="https://github.com/gimenes77">
-    <img src="https://github.com/gimenes77.png" width="100px;" style="border-radius:50%" />
-  </a>
-   <a href="https://github.com/ArthurBigodeAug">
-    <img src="https://github.com/ArthurBigodeAug.png" width="100px;" style="border-radius:50%" />
-  </a>
+  <a href="https://github.com/Enzo-Dutra/Reposit-rio-Apresenta-o-Eniac/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Enzo-Dutra/Reposit-rio-Apresenta-o-Eniac" />
+</a>
 </p>
+
 
