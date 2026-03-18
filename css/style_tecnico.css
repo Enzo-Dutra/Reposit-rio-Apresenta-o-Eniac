@@ -1,0 +1,614 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ===================================================== */
+/* ======================= RESET ======================== */
+/* ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 20px;
+  background: linear-gradient(135deg, #00082e, #001a5c);
+  color: #e0e0ff;
+  overflow-x: hidden; /* Apenas esconde rolagem horizontal */
+}
+
+/* ===================================================== */
+/* ====================== NAVBAR ======================== */
+/* ===================================================== */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(62, 69, 148, 0.13);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e0e0ff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: rgba(80, 198, 248, 0.5);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+}
+
+/* ===================================================== */
+/* ====================== TOP HERO ====================== */
+/* ===================================================== */
+
+.top-hero {
+  margin-top: 140px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.top-content {
+  width: 85%;
+  text-align: center;
+}
+
+.top-logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.top-text h1 {
+  font-size: 90px;
+  margin-bottom: 10px;
+}
+
+.top-text p {
+  font-size: 25px;
+  color: #cfcfff;
+}
+
+/* Efeito corte no = */
+
+.equal-cut {
+  position: relative;
+  font-size: 90px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.equal-cut::after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  top: 57%;
+  width: 90%;
+  height: 5px;
+  background: #00aaff;
+  transform: rotate(-60deg);
+}
+
+/* ===================================================== */
+/* ===================== BOTÕES ========================= */
+/* ===================================================== */
+
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.big-btn {
+  padding: 22px 60px;
+  width: 400px;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 20px 0 80px 0;
+}
+
+/* BOTÃO GLASS */
+
+.glass-btn {
+  padding: 12px 25px;
+  background: rgba(62, 69, 148, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.glass-btn:hover {
+  background: rgba(80, 198, 248, 0.6);
+  transform: translateY(-3px);
+}
+
+/* ===================================================== */
+/* ===================== CONTAINER ====================== */
+/* ===================================================== */
+
+.container {
+  height: 100vh; /* Altura total da tela */
+  overflow-y: scroll; /* Permite rolar */
+  scroll-snap-type: y mandatory; /* O segredo: define o eixo Y e obriga o encaixe */
+  scroll-behavior: smooth; /* Rolagem suave */
+  
+  margin: 0; 
+  padding: 0;
+
+  scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* ===================================================== */
+/* ======================== HERO ======================== */
+/* ===================================================== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 100px;
+}
+
+.hero img {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 120, 171, 0.5);
+}
+
+.hero-text {
+  width: 50%;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ===================================================== */
+/* ====================== SECTIONS ====================== */
+/* ===================================================== */
+
+.section {
+  margin: 100px 0;
+  height: 100vh; /* Cada seção ocupa a tela toda */
+  width: 100%;
+  scroll-snap-align: start; /* Onde a seção deve travar (no topo) */
+  
+  /* Apenas para visualização */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cards-container {
+  margin-bottom: 50px;
+}
+
+.section, .hero, .cards-info {
+  /* Adicione isso se não existir na classe .section */
+  padding-top: 100px; /* Compensa a altura da Navbar */
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+/* ===================================================== */
+/* ====================== GRID 2 ======================== */
+/* ===================================================== */
+
+.grid-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.grid-2 img {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 120, 171, 0.4);
+}
+
+.grid-2 .text {
+  width: 50%;
+}
+
+.grid-2 .text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.grid-2 .text p {
+  line-height: 1.8;
+}
+
+/* ===================================================== */
+/* ====================== FLIP CARDS ==================== */
+/* ===================================================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+
+}
+
+.card-flip {
+  background-color: transparent;
+  height: 220px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card-flip:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 120, 171, 0.2);
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background: rgba(62, 69, 148, 0.18);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+
+.card-back {
+  background: rgba(80, 198, 248, 0.35);
+  backdrop-filter: blur(15px);
+  color: #ffffff;
+  transform: rotateY(180deg);
+  box-shadow: 0 0 25px rgba(80, 198, 248, 0.4);
+}
+
+.card-front h3,
+.card-back h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.card-front p,
+.card-back p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===================================================== */
+/* ======================== FOOTER ====================== */
+/* ===================================================== */
+
+footer {
+  background: rgba(62, 69, 148, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 100px;
+}
+
+footer p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ===================================================== */
+/* ===================== RESPONSIVO ===================== */
+/* ===================================================== */
+
+@media (max-width: 900px) {
+
+  .hero,
+  .grid-2,
+  .top-logo-text {
+    flex-direction: column;
+  }
+
+  .hero img,
+  .hero-text,
+  .grid-2 img,
+  .grid-2 .text {
+    width: 100%;
+  }
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .top-text h1 {
+    font-size: 55px;
+  }
+
+  .equal-cut {
+    font-size: 55px;
+  }
+
+  .big-btn {
+    width: 100%;
+  }
+}
+
+
+
+/*Cards Eduardo e Predeus
+/* ================= Cards - técnico ================= */
+.cards-container {
+  display: flex;
+  gap: 40px;
+   margin-top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh; 
+}
+
+.card {
+  width: 340px;
+  padding: 40px 30px;
+  background: rgba(17, 18, 42, 0.4);
+  border-radius: 20px;
+  position: relative;
+  color: #cfcfe6;
+  box-shadow: 0 0 25px rgba(0, 120, 171, 0.4);
+  transition: 0.3s ease;
+  margin: 0px 50px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(0, 120, 171, 0.7);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg,  #2199cc,  #0078AB);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(0, 120, 171, 0.6);
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.line {
+  display: block;
+  width: 225px;
+  height: 3px;
+  background: linear-gradient(90deg, #0c5b7c,#2199cc );
+  margin: 12px 0 20px 0;
+  border-radius: 10px;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #b5b5d6;
+  margin-bottom: 18px;
+}
+
+a.card {
+  text-decoration: none; 
+  display: flex; 
+  flex-direction: column; 
+  color: inherit;
+}
+
+a.card:active {
+  transform: scale(0.98); 
+}
+
+/* Cards do Henrique
+/* ================= CARDS & FLEXBOX ================= */
+.grid {
+/* Usando flexbox para centralizar perfeitamente linhas ímpares */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.card-a {
+  width: 280px; /* Largura fixa para manter o padrão */
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(62, 69, 148, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, background 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-a:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,120,171,0.3);
+  background: rgba(0,120,171,0.2);
+}
+
+/* Container da imagem para segurar o overflow do zoom */
+.img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .img-wrapper img {
+  transform: scale(1.07);
+}
+
+/* Estilo da Legenda */
+.card-legend {
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+
+/* ================== CORREÇÃO INFRAESTRUTURA ================== */
+
+#id-capacitacao .hero {
+  max-width: 1500px;      /* Largura máxima para monitores grandes */
+  margin: 0 auto;         /* Centraliza o bloco todo na tela */
+  padding: 0 50px;        /* Dá um respiro nas laterais esquerda/direita */
+  width: 100%;            
+  display: flex;          /* Garante o lado a lado */
+  align-items: center;    /* Alinha verticalmente no centro */
+  justify-content: space-between; /* Espalha texto e imagem */
+  gap: 60px;              /* Espaço entre o texto e a imagem */
+}
+
+/* 2. Ajusta o bloco de texto para o lado esquerdo */
+#id-capacitacao .hero-text {
+  width: 48%;             /* Ocupa quase metade da tela */
+  text-align: left;       /* Garante alinhamento à esquerda */
+}
+
+/* 1. Controla o container para não colar nas bordas da tela */
+#id-infraestrutura .hero {
+  max-width: 1500px;      /* Largura máxima para monitores grandes */
+  margin: 0 auto;         /* Centraliza o bloco todo na tela */
+  padding: 0 50px;        /* Dá um respiro nas laterais esquerda/direita */
+  width: 100%;            
+  display: flex;          /* Garante o lado a lado */
+  align-items: center;    /* Alinha verticalmente no centro */
+  justify-content: space-between; /* Espalha texto e imagem */
+  gap: 60px;              /* Espaço entre o texto e a imagem */
+}
+
+/* 2. Ajusta o bloco de texto para o lado esquerdo */
+#id-infraestrutura .hero-text {
+  width: 48%;             /* Ocupa quase metade da tela */
+  text-align: left;       /* Garante alinhamento à esquerda */
+}
+
+/* Removemos larguras fixas antigas que quebravam o layout */
+#texto2 {
+  width: 100%;            
+  padding: 0;
+}
+
+
+#img_instituicao {
+  width: 48%;             
+  display: flex;
+  justify-content: center;
+  margin: 0;              
+  padding: 0;            
+}
+
+#img_instituicao img {
+  width: 100%;            
+  height: auto;
+  border-radius: 20px;   
+  box-shadow: 0 0 30px rgba(0, 120, 171, 0.5);
+}
+
+@media (max-width: 900px) {
+  #id-infraestrutura .hero {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  #id-infraestrutura .hero-text, 
+  #img_instituicao {
+    width: 100%;
+  }
+}
